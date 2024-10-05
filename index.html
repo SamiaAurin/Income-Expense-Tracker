@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income-Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Income-Expense Tracker</h1>
+    <main>
+        <header>
+            <div>
+                <h5>Total Balance</h5>
+                <span id="balance">0.00 Tk</span>
+            </div>
+            <div>
+                <h5>Income</h5>
+                <span id="income">0.00 Tk</span>
+            </div>
+            <div>
+                <h5>Expense</h5>
+                <span id="expense">0.00 Tk</span>
+            </div>
+        </header>
+
+        <section>
+            <h3 id="titleText">Add Transaction</h3>
+            <form id="transactionForm">
+               <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+               </div>
+               <div>
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="+Income/-Expense"  step="1" required />
+               </div>
+               <div>
+                  <label for="date">Date</label>
+                  <input type="date" name="date" id = "date" required />
+               </div>
+               <button type="submit" id="add-btn">Add</button>
+               <button type="button" id="cancelEditButton" style="display: none; margin-top: 5px;">
+                Cancel Edit
+              </button>
+            </form>
+        </section>
+
+        <section>
+            <h3 style="margin-top: 20px">Transactions</h3>
+            <ul id="transactionList"></ul>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
